@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://192.168.30.134:8848
+dubbo:
+  scan:
+    base-packages: com.hh.springclouddubbosampleprovider.service.impl
+  protocol:
+    port: 20882
+    name: dubbo

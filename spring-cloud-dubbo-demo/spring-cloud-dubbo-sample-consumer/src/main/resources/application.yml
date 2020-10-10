@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.30.134:8848
+dubbo:
+  protocol:
+    name: dubbo
+  cloud:
+    subscribed-services: provider
