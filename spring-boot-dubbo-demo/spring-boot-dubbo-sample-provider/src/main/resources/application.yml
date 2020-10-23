@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: provider
+dubbo:
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: nacos://192.168.30.134:8848
+  scan:
+    base-packages: com.hh.springbootdubbosampleprovider.service.impl
+server:
+  port: 8080

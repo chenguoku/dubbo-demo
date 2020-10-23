@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: consumer
+dubbo:
+  registry:
+    address: nacos://192.168.30.134:8848
+
+server:
+  port: 8081
