@@ -12,5 +12,7 @@ dubbo:
   scan:
     base-packages: com.hh.springclouddubbosampleprovider.service.impl
   protocol:
-    port: 20882
+    port: -1
     name: dubbo
+  cloud:
+    subscribed-services: consumer

@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8090
 
 spring:
   application:
@@ -11,5 +11,10 @@ spring:
 dubbo:
   protocol:
     name: dubbo
+    port: -1
   cloud:
     subscribed-services: provider
+#  consumer:
+#    loadbalance: roundrobin
+#  provider:
+#    loadbalance: roundrobin

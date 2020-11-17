@@ -16,7 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @Reference
+    //    @Reference
+//    @Reference(loadbalance = "roundrobin") //轮询
+    @Reference(
+            mock = "com.hh.springclouddubbosampleapi.service.impl.HelloServiceMock",
+            cluster = "failover",
+            check = false,
+            timeout = 500,
+            retries = 5)
     private HelloService helloService;
 
     @GetMapping("say/{name}")
